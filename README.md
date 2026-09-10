@@ -23,7 +23,13 @@ Then visit <http://127.0.0.1:8080/demo/?appid=620>.
 
 ## Use with a Steam app id
 
-Include the stylesheet and import the two functions:
+Install the tagged repository directly:
+
+```sh
+npm install github:GustavoHSCruz/SteamProfiler.Player#v0.1.0
+```
+
+Then include the stylesheet and import the two functions:
 
 ```html
 <link rel="stylesheet" href="./node_modules/@steamprofiler/player/src/player.css">
@@ -39,6 +45,18 @@ Include the stylesheet and import the two functions:
     const player = mountTrailer(document.querySelector('#video'), trailer);
     await player.ready;
   }
+</script>
+```
+
+For a page without npm, pin the same release through jsDelivr rather than
+pointing at the moving `main` branch:
+
+```html
+<link rel="stylesheet"
+  href="https://cdn.jsdelivr.net/gh/GustavoHSCruz/SteamProfiler.Player@v0.1.0/src/player.css">
+<script type="module">
+  import { steamTrailer, mountTrailer } from
+    'https://cdn.jsdelivr.net/gh/GustavoHSCruz/SteamProfiler.Player@v0.1.0/src/index.js';
 </script>
 ```
 
