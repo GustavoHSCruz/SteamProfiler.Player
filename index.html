@@ -1,0 +1,24 @@
+<!--
+  This file is subject to the Common Public Attribution License Version 1.0.
+  The Original Code is SteamProfiler Player.
+  The Initial Developer is Gustavo Cruz. Copyright (c) 2026 Gustavo Cruz.
+  A copy of the License is included in LICENSE. Software is provided "AS IS".
+-->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>SteamProfiler Player</title>
+  <script>
+    const target = new URL('./demo/', location.href);
+    target.search = location.search;
+    target.hash = location.hash;
+    location.replace(target);
+  </script>
+</head>
+<body>
+  <p><a href="./demo/">Abrir SteamProfiler Player</a></p>
+</body>
+</html>

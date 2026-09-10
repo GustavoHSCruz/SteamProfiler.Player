@@ -1,0 +1,81 @@
+<!--
+  This file is subject to the Common Public Attribution License Version 1.0.
+  The Original Code is SteamProfiler Player.
+  The Initial Developer is Gustavo Cruz. Copyright (c) 2026 Gustavo Cruz.
+  A copy of the License is included in LICENSE. Software is provided "AS IS".
+-->
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Demonstração e documentação do player de vídeo independente do steamprofiler.org.">
+  <meta name="color-scheme" content="dark">
+  <title>SteamProfiler Player</title>
+  <link rel="stylesheet" href="../src/player.css">
+  <link rel="stylesheet" href="./page.css">
+</head>
+<body>
+  <header class="top">
+    <a class="wordmark" href="https://steamprofiler.org/">steamprofiler<span>.org</span></a>
+    <a href="https://github.com/GustavoHSCruz/SteamProfiler.Player">código-fonte ↗</a>
+  </header>
+
+  <main>
+    <section class="intro">
+      <p class="eyebrow">COMPONENTE ABERTO · API V1</p>
+      <h1>Um player só.<br><em>Qualquer página.</em></h1>
+      <p>O mesmo player usado nos trailers do SteamProfiler, separado do restante do site e disponível para integrações de terceiros.</p>
+    </section>
+
+    <section class="lab" aria-labelledby="lab-title">
+      <div class="lab-head">
+        <div>
+          <p class="eyebrow">TESTE COM UM JOGO</p>
+          <h2 id="lab-title">Trailer pela App ID</h2>
+        </div>
+        <form id="lookup">
+          <label for="appid">Steam App ID</label>
+          <input id="appid" name="appid" inputmode="numeric" pattern="[0-9]{1,8}" value="620" required>
+          <button type="submit">carregar</button>
+        </form>
+      </div>
+      <div class="stage" id="stage">
+        <p>Escolha um jogo para montar o player.</p>
+      </div>
+      <div class="result">
+        <p id="status" role="status" aria-live="polite"></p>
+        <a id="store-link" target="_blank" rel="noopener" hidden>abrir na Steam ↗</a>
+      </div>
+    </section>
+
+    <section class="docs">
+      <div>
+        <p class="eyebrow">INSTALAÇÃO</p>
+        <h2>Sem framework e sem dependências</h2>
+        <p>Importe o módulo, inclua a folha de estilos e entregue um elemento onde o player será montado.</p>
+      </div>
+      <pre><code>import {
+  steamTrailer,
+  mountTrailer
+} from '@steamprofiler/player';
+
+const data = await steamTrailer(620);
+const player = mountTrailer(
+  document.querySelector('#video'),
+  data
+);
+
+await player.ready;</code></pre>
+    </section>
+
+    <section class="contract">
+      <p><b>Responsabilidades separadas.</b> O pacote desenha e controla vídeo. A API pública converte uma App ID em metadados e fontes fornecidas pela Steam. Nenhuma chave da Steam chega ao navegador.</p>
+      <p><b>Atribuição.</b> Distribuições deste componente mantêm a marca e o link visíveis para steamprofiler.org, conforme a licença do repositório.</p>
+    </section>
+  </main>
+
+  <footer>SteamProfiler Player · independente da Valve Corporation</footer>
+  <script type="module" src="./page.js"></script>
+</body>
+</html>

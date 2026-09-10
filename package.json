@@ -1,0 +1,24 @@
+{
+  "name": "@steamprofiler/player",
+  "version": "0.1.0",
+  "description": "The standalone SteamProfiler video player and its public Steam trailer adapter.",
+  "type": "module",
+  "exports": {
+    ".": "./src/index.js",
+    "./player": "./src/player.js",
+    "./steam": "./src/steam.js",
+    "./player.css": "./src/player.css"
+  },
+  "files": ["src", "LICENSE", "NOTICE"],
+  "scripts": {
+    "check": "node --check src/player.js && node --check src/steam.js && node --check src/index.js && node --test"
+  },
+  "keywords": ["video-player", "steam", "hls", "media-source"],
+  "author": "Gustavo Cruz",
+  "license": "CPAL-1.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GustavoHSCruz/SteamProfiler.Player.git"
+  },
+  "homepage": "https://gustavohscruz.github.io/SteamProfiler.Player/"
+}

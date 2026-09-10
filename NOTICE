@@ -1,0 +1,13 @@
+SteamProfiler Player
+Copyright (c) 2026 Gustavo Cruz
+
+The Source Code for this player is available at:
+https://github.com/GustavoHSCruz/SteamProfiler.Player
+
+This component is distributed under the Common Public Attribution License
+Version 1.0 (CPAL-1.0). Exhibit B requires the visible attribution phrase
+"steamprofiler.org", linked to https://steamprofiler.org/, in the player user
+interface, including when the player is incorporated into a Larger Work.
+
+The player supplies that attribution itself. Integrators should not hide,
+cover, remove, or disable it.

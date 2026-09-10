@@ -1,0 +1,4 @@
+2026-09-10 — Initial publication by Gustavo Cruz.
+
+Extracted the SteamProfiler video control surface into an independent package,
+added its public Steam trailer adapter, and added a standalone demonstration.
